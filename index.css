@@ -12,7 +12,7 @@ input{
     box-sizing: border-box;
    border: 1px solid #5f9341;
 }
-#input-btn{
+#input-btn, #tab-btn{
     margin-top: 5px;
     padding: 10px 20px;
     background-color: #5f9341;

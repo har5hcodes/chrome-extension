@@ -1,6 +1,7 @@
 
 let myLeads = []
 const inputBtn = document.getElementById("input-btn")
+const tabBtn = document.getElementById("tab-btn")
 const deleteBtn = document.getElementById("delete-btn")
 const inputEl = document.getElementById("input-el")
 const ulEl = document.getElementById("ul-el")
@@ -20,7 +21,17 @@ inputBtn.addEventListener("click", function () {
     render(myLeads)
 })
 
-deleteBtn.addEventListener("dblclick", function () {
+const tabs = [
+    { url: "hekekhf" }
+]
+
+tabBtn.addEventListener("click", function () {
+    myLeads.push(tabs[0].url)
+    localStorage.setItem("myLeads", JSON.stringify(myLeads))
+    render(myLeads)
+})
+
+deleteBtn.addEventListener("click", function () {
     localStorage.clear()
     myLeads = []
     render(myLeads)
